@@ -1,3 +1,3 @@
+from GameController import GameController
 def main():
-    if __name__ == '__main__':
-        main()
+    game = GameController()
