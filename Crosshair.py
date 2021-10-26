@@ -5,3 +5,4 @@ class Crosshair(pygame.sprite.Sprite):
         self.image = pygame.Surface([width,height])
         self.image.fill(color)
         self.rect = self.image.get_rect()
+        self.rect.center = [pos_x, pos_y]

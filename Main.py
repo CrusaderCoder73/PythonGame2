@@ -1,3 +1,6 @@
+import pygame
+import sys
 from GameController import GameController
-def main():
-    game = GameController()
+game = GameController()
+game.run()
+    
