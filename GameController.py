@@ -9,13 +9,16 @@ class GameController:
         self.height = 600
         self.screen = pygame.display.set_mode((self.width, self.height))
         self.clock = pygame.time.Clock()
+        self.background = pygame.image.load("Stars.png")
+        pygame.mouse.set_visible(False)
     
     def run(self):
         """Run method that runs the game """
-        crosshair = Crosshair(50, 50, 100, 100, (255, 255, 255))
 
+        crosshair = Crosshair(50, 50, 100, 100, (255, 255, 255))
         crosshair_group = pygame.sprite.Group()
         crosshair_group.add(crosshair)
+
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -23,5 +26,6 @@ class GameController:
             
             
             pygame.display.flip()
+            self.screen.blit(self.background,(0,0))
             crosshair_group.draw(self.screen)
             self.clock.tick(60)
