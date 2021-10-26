@@ -15,7 +15,7 @@ class GameController:
     def run(self):
         """Run method that runs the game """
 
-        crosshair = Crosshair(50, 50, 100, 100, (255, 255, 255))
+        crosshair = Crosshair("circle_dot.png")
         crosshair_group = pygame.sprite.Group()
         crosshair_group.add(crosshair)
 
@@ -28,4 +28,5 @@ class GameController:
             pygame.display.flip()
             self.screen.blit(self.background,(0,0))
             crosshair_group.draw(self.screen)
+            crosshair_group.update()
             self.clock.tick(60)
