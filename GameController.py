@@ -1,6 +1,7 @@
 import pygame
 import sys
 class GameController():
+    """Game Controller Constructor"""
     def __init__(self):
         pygame.init()
         self.width = 400
