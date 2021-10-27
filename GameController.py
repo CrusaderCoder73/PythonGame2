@@ -25,8 +25,10 @@ class GameController:
                     sys.exit()
             
             
-            pygame.display.flip()
+            self.screen.fill((0, 0 ,0))
             self.screen.blit(self.background,(0,0))
             crosshair_group.draw(self.screen)
             crosshair_group.update()
+            pygame.display.flip()
             self.clock.tick(60)
+            
