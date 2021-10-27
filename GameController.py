@@ -32,13 +32,13 @@ class GameController:
                 if event.type == pygame.QUIT:
                     sys.exit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    crosshair.shoot()
+                    crosshair.shoot(crosshair, target_group)
             
             self.screen.fill((0, 0 ,0))
             self.screen.blit(self.background,(0,0))
 
-            crosshair_group.draw(self.screen)
             target_group.draw(self.screen)
+            crosshair_group.draw(self.screen)
             crosshair_group.update()
             pygame.display.flip()
             self.clock.tick(60)
