@@ -1,6 +1,9 @@
 import pygame
 class Target(pygame.sprite.Sprite):
+    """Target class that takes in a picture and the target's x and y position
+    the class inherits from pygame's sprite class"""
     def __init__(self, picture_path, pos_x, pos_y):
+        """Target constructor"""
         super().__init__()
         self.image = pygame.image.load(picture_path)
         self.rect = self.image.get_rect()
